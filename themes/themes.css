@@ -3,7 +3,7 @@
     display: none;
 }
 html, body {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(135deg, #2e1a1a 0%, #3e1616 100%);
     font-family: 'Roboto', sans-serif;
     color: #e0e0e0;
     margin: 0;
@@ -44,7 +44,7 @@ label:hover {
 
 
 .neon-text {
-    text-shadow: 0 0 5px rgba(123, 31, 162, 0.7), 0 0 10px rgba(123, 31, 162, 0.5);
+    text-shadow: 0 0 5px rgba(194, 26, 26, 0.7), 0 0 10px rgba(213, 0, 0, 0.5);
 }
 
 
