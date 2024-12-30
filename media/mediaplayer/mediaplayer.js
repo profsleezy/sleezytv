@@ -486,7 +486,7 @@ async function displaySelectedMedia(media, mediaType) {
 
         const castList = castData.cast.slice(0, 5).map(actor => `
                 <div class="flex-shrink-0 w-28 mx-2 text-center">
-                    <div class="w-28 h-28 mx-auto mb-2 rounded-full overflow-hidden border-2 border-purple-500 shadow-lg">
+                    <div class="w-28 h-28 mx-auto mb-2 rounded-full overflow-hidden border-2 border-red-500 shadow-lg">
                         <img src="${actor.profile_path ? 'https://image.tmdb.org/t/p/w500' + actor.profile_path : 'path/to/placeholder-image.jpg'}" alt="${actor.name}" 
                              class="w-full h-full object-cover" onerror="this.src='path/to/placeholder-image.jpg';">
                     </div>
@@ -801,7 +801,7 @@ async function displaySelectedMedia(media, mediaType) {
                 }
 
                 return `
-        <div class="episode-item bg-gradient-to-br from-black via-gray-900 to-purple-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer relative group" data-episode-number="${episode.number}">
+        <div class="episode-item bg-gradient-to-br from-black via-gray-900 to-red-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 cursor-pointer relative group" data-episode-number="${episode.number}">
             <div class="relative">
                 <img 
                     src="${episode.stillPath ? 'https://image.tmdb.org/t/p/w780' + episode.stillPath : 'https://via.placeholder.com/780x439?text=No+Image'}"
@@ -811,9 +811,9 @@ async function displaySelectedMedia(media, mediaType) {
                 >
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
                 <div class="absolute bottom-2 left-2">
-                    <h3 class="text-purple-300 text-xs font-semibold">E${episode.number}: ${escapeHtml(episode.name)}</h3>
+                    <h3 class="text-red-300 text-xs font-semibold">E${episode.number}: ${escapeHtml(episode.name)}</h3>
                 </div>
-                <button class="description-toggle absolute top-2 right-2 text-white bg-purple-700 bg-opacity-80 rounded-full p-1 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity">
+                <button class="description-toggle absolute top-2 right-2 text-white bg-red-700 bg-opacity-80 rounded-full p-1 focus:outline-none opacity-0 group-hover:opacity-100 transition-opacity">
                     <!-- Heroicons Information Circle Icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white hover:text-yellow-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <title>View Details</title>
@@ -821,22 +821,22 @@ async function displaySelectedMedia(media, mediaType) {
                     </svg>
                 </button>
                 <div class="absolute bottom-0 left-0 w-full h-2 bg-gray-800">
-                    <div class="h-full bg-purple-600" style="width: ${progressPercentage}%;"></div>
+                    <div class="h-full bg-red-600" style="width: ${progressPercentage}%;"></div>
                 </div>
             </div>
             <div class="p-3 bg-black bg-opacity-70">
-                <p class="text-purple-200 text-xs mb-2 flex items-center">
+                <p class="text-red-200 text-xs mb-2 flex items-center">
                     <!-- Heroicons Calendar Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-purple-200 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-red-200 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <title>Air Date</title>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7H3v12a2 2 0 002 2z" />
                     </svg>
                     ${episode.airDate ? new Date(episode.airDate).toLocaleDateString() : 'Unknown'}
                 </p>
-                <p class="text-purple-300 text-xs mt-1">Watched: ${watchedMinutes} min / ${durationMinutes} min</p>
+                <p class="text-red-300 text-xs mt-1">Watched: ${watchedMinutes} min / ${durationMinutes} min</p>
             </div>
             <!-- Description content with mirror effect -->
-            <div class="description-content hidden text-purple-100 text-xs bg-gradient-to-b from-purple-900 via-black to-black bg-opacity-95 p-3 rounded-lg absolute inset-0 overflow-hidden z-30 transition transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 duration-300 ease-in-out">
+            <div class="description-content hidden text-red-100 text-xs bg-gradient-to-b from-red-900 via-black to-black bg-opacity-95 p-3 rounded-lg absolute inset-0 overflow-hidden z-30 transition transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 duration-300 ease-in-out">
                 <button class="close-description absolute top-4 right-4 text-white bg-red-600 hover:bg-red-700 p-2 rounded-full focus:outline-none">
                     <!-- Heroicons X Icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -901,15 +901,15 @@ async function displaySelectedMedia(media, mediaType) {
                 <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg"></div>
             </div>
             <div class="mt-4 sm:mt-0 sm:ml-4 flex-1 bg-black bg-opacity-70 p-3 rounded-lg">
-                <h4 class="text-purple-300 text-lg font-semibold">Season ${seasonNumber}</h4>
-                <p class="text-purple-200 text-sm mb-2">${season.episode_count} Episodes</p>
+                <h4 class="text-red-300 text-lg font-semibold">Season ${seasonNumber}</h4>
+                <p class="text-red-200 text-sm mb-2">${season.episode_count} Episodes</p>
                 <div class="w-full bg-gray-800 h-2 rounded-full">
-                    <div class="bg-purple-600 h-2 rounded-full" style="width: ${progressPercentage}%;"></div>
+                    <div class="bg-red-600 h-2 rounded-full" style="width: ${progressPercentage}%;"></div>
                 </div>
-                <p class="text-purple-200 text-xs mt-1">${episodesWatched} / ${season.episode_count} Episodes Watched</p>
+                <p class="text-red-200 text-xs mt-1">${episodesWatched} / ${season.episode_count} Episodes Watched</p>
             </div>
             <!-- Heroicons Chevron Right Icon -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400 absolute right-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400 absolute right-4 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <title>View Episodes</title>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -941,19 +941,19 @@ async function displaySelectedMedia(media, mediaType) {
 
             const modalContent = `
         <div class="modal-overlay fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center z-50">
-            <div class="modal-container bg-gradient-to-br from-black via-gray-900 to-purple-900 rounded-3xl shadow-2xl overflow-hidden max-w-full w-full md:max-w-6xl md:w-auto max-h-full relative">
-                <button id="closeModalButton" class="absolute top-4 right-4 md:top-6 md:right-6 text-purple-300 text-2xl md:text-3xl hover:text-purple-500 focus:outline-none">&times;</button>
+            <div class="modal-container bg-gradient-to-br from-black via-gray-900 to-red-900 rounded-3xl shadow-2xl overflow-hidden max-w-full w-full md:max-w-6xl md:w-auto max-h-full relative">
+                <button id="closeModalButton" class="absolute top-4 right-4 md:top-6 md:right-6 text-red-300 text-2xl md:text-3xl hover:text-red-500 focus:outline-none">&times;</button>
                 <div class="flex flex-col md:flex-row h-full">
                     <div class="seasons-list md:w-1/3 w-full bg-black bg-opacity-80 overflow-y-auto custom-scrollbar max-h-screen p-4">
-                        <h3 class="text-2xl font-bold text-purple-300 p-4 border-b border-purple-700">Seasons</h3>
+                        <h3 class="text-2xl font-bold text-red-300 p-4 border-b border-red-700">Seasons</h3>
                         <div class="p-2 space-y-3">
                             ${renderSeasonList(seasonsData)}
                         </div>
                     </div>
                     <div class="episodes-grid md:w-2/3 w-full p-4 md:p-6 overflow-y-auto custom-scrollbar max-h-screen bg-black bg-opacity-80">
-                        <h2 class="text-2xl md:text-3xl font-bold text-purple-300 mb-6">Select Episode</h2>
+                        <h2 class="text-2xl md:text-3xl font-bold text-red-300 mb-6">Select Episode</h2>
                         <div class="mb-6">
-                            <input type="text" id="episodeSearchInput" class="w-full p-3 bg-gray-800 text-purple-200 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600" placeholder="Search episodes...">
+                            <input type="text" id="episodeSearchInput" class="w-full p-3 bg-gray-800 text-red-200 rounded-full focus:outline-none focus:ring-2 focus:ring-red-600" placeholder="Search episodes...">
                         </div>
                         <div id="episodeGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                             ${renderEpisodeGrid([])} <!-- Initially empty; episodes will be loaded based on selected season -->

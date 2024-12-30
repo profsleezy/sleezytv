@@ -17,7 +17,7 @@
   <div class="flex flex-col lg:flex-row gap-6">
     <!-- Poster and Controls Section -->
     <div class="lg:w-1/3 w-full space-y-6">
-      <div class="relative rounded-2xl overflow-hidden glassmorphism-form shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_rgba(75,0,130,0.7)]">
+      <div class="relative rounded-2xl overflow-hidden glassmorphism-form shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_rgba(162,31,31,0.7)]">
         <div class="absolute inset-0 bg-cover bg-center high-quality-bg opacity-70"
              style="background-image: url('https://image.tmdb.org/t/p/original{{poster_path}}');">
         </div>
@@ -34,7 +34,7 @@
             <i class="fas fa-language mr-2"></i>Select Language:
           </label>
           <select id="languageSelect"
-                  class="custom-select sm-select w-full bg-gray-800 text-white rounded-lg border border-gray-700 p-1 sm:p-2 focus:border-purple-400 focus:ring-purple-400 transition duration-200 ease-in-out">
+                  class="custom-select sm-select w-full bg-black-800 text-white rounded-lg border border-gray-700 p-1 sm:p-2 focus:border-red-400 focus:ring-red-400 transition duration-200 ease-in-out">
             <option value="en">English</option>
             <option value="fr">French</option>
           </select>
@@ -48,7 +48,7 @@
             <i class="bi bi-tv mr-2"></i>Select Content Provider:
           </label>
           <select id="providerSelect"
-                  class="custom-select sm-select w-full bg-gray-900 text-white rounded-md border border-gray-700 p-2 pl-3 text-xs focus:border-purple-400 focus:ring-purple-400 focus:outline-none shadow-md transition duration-200 ease-in-out">
+                  class="custom-select sm-select w-full bg-black-900 text-white rounded-md border border-gray-700 p-2 pl-3 text-xs focus:border-red-400 focus:ring-red-400 focus:outline-none shadow-md transition duration-200 ease-in-out">
 
             <!-- Best Providers Section -->
             <optgroup label="Best Providers (No Ads)" class="bg-gray-800 rounded-lg mb-2 p-2 text-sm font-semibold text-green-400">
@@ -182,12 +182,12 @@
 <style>
   /* Additional Enhancements */
   .btn-gradient {
-    background: linear-gradient(90deg, #4b0082, #000000);
+    background: linear-gradient(90deg, #820000, #000000);
     transition: transform 0.3s, background 0.3s;
   }
   .btn-gradient:hover {
     transform: scale(1.05);
-    background: linear-gradient(90deg, #6a0dad, #1a1a1a);
+    background: linear-gradient(90deg, #ad0d0d, #1a1a1a);
   }
   /* Loading Screen Styles */
 #loadingScreen {
@@ -211,7 +211,7 @@
 <div id="loadingScreen" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50 hidden">
   <div class="text-center">
     <div class="w-64 h-2 bg-gray-800 rounded-full overflow-hidden mb-4">
-      <div id="progressBar" class="h-full bg-purple-600 transition-all duration-300"></div>
+      <div id="progressBar" class="h-full bg-red-600 transition-all duration-300"></div>
     </div>
     <p id="loadingMessage" class="text-white text-lg font-semibold">Initializing...</p>
   </div>

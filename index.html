@@ -39,7 +39,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body class="font-poppins bg-gradient-to-br from-gray-900 to-black text-gray-100">
+<body class="font-poppins text-gray-100">
 <script async data-cfasync="false">
     (function() {
         const url = new URL(window.location.href);
@@ -71,7 +71,7 @@
         <!-- Header Section -->
         <div class="text-center mb-12">
             <h1
-            class="text-4xl sm:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 neon-text">
+            class="text-4xl sm:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600 neon-text">
             <a href="/" id="logo" style="text-decoration: none; margin-left: 50px;">
                 <img src="logo.png" alt="NovaFork Logo" class="inline-block">
             </a>
@@ -84,7 +84,7 @@
         <!-- Social Links -->
         <div class="flex flex-wrap gap-1 mb-6 justify-center">
             <a href="https://discord.gg/XbDBBmh5FY" target="_blank"
-               class="glassmorphism text-white py-1 px-2 sm:py-1.5 sm:px-3 rounded-full flex items-center space-x-1 hover:bg-purple-700 transition duration-300 ease-in-out text-xs sm:text-sm">
+               class="glassmorphism text-white py-1 px-2 sm:py-1.5 sm:px-3 rounded-full flex items-center space-x-1 hover:bg-red-700 transition duration-300 ease-in-out text-xs sm:text-sm">
                 <i class="fab fa-discord text-xs sm:text-sm"></i>
                 <span>Discord</span>
             </a>
@@ -112,7 +112,7 @@
 
                 <!-- Bitcoin Address with better wrapping -->
                 <div class="bg-gray-800 p-3 sm:p-4 rounded-lg mb-6">
-                    <p class="text-center text-purple-400 font-mono break-all text-md sm:text-lg">
+                    <p class="text-center text-red-400 font-mono break-all text-md sm:text-lg">
                         bc1qe7u83uv54f2jkaukvz4k8y83dafx2lqmld4lzu
                     </p>
                 </div>
@@ -134,10 +134,10 @@
         <!-- Search Section -->
         <div class="relative flex-1 mb-6 sm:mb-8">
             <input type="text" id="searchInput" placeholder="The Simpsons is nice!"
-                   class="w-full p-2 sm:p-4 pl-10 sm:pl-12 glassmorphism text-white placeholder-gray-400 rounded-full focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out text-xs sm:text-base">
+                   class="w-full p-2 sm:p-4 pl-10 sm:pl-12 glassmorphism text-white placeholder-gray-400 rounded-full focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out text-xs sm:text-base">
             <i class="fas fa-search absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs sm:text-base"></i>
             <button id="searchButton"
-                    class="absolute inset-y-0 right-0 text-white font-bold py-1 px-3 sm:py-2 sm:px-6 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 focus:outline-none transition duration-300 ease-in-out text-xs sm:text-base">Search</button>
+                    class="absolute inset-y-0 right-0 text-white font-bold py-1 px-3 sm:py-2 sm:px-6 rounded-full bg-gradient-to-r from-red-400 to-red-700 hover:from-red-500 hover:to-red-500 focus:outline-none transition duration-300 ease-in-out text-xs sm:text-base">Search</button>
             <div id="searchSuggestions"
                  class="absolute w-full glassmorphism text-white rounded-lg mt-1 hidden z-10 max-h-96 overflow-y-auto hover:cursor-pointer transition duration-300 ease-in-out"></div>
         </div>
@@ -149,15 +149,15 @@
             <div class="flex flex-wrap items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
                 <!-- Category Select -->
                 <select id="categorySelect"
-                        class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out custom-select">
+                        class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out custom-select">
                 </select>
                 <!-- Type Select -->
                 <select id="typeSelect"
-                        class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out custom-select">
+                        class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out custom-select">
                 </select>
                 <!-- Toggle Button for Additional Filters -->
                 <button id="toggleFiltersButton"
-                        class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm flex items-center focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out">
+                        class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm flex items-center focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out">
             <span id="toggleIcon" class="transform transition-transform duration-300 ease-in-out mr-1 sm:mr-2">
                 <!-- Down Arrow Icon -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24"
@@ -175,13 +175,13 @@
                 <div class="flex flex-wrap items-center gap-2 sm:gap-4">
                     <!-- Actor Search Input -->
                     <input id="actorSearchInput" type="text" placeholder="Search by Actor"
-                           class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out"/>
+                           class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out"/>
 
                     <!-- Company Search Input and Suggestions -->
                     <div class="relative w-full sm:w-auto">
                         <!-- Company Search Input -->
                         <input id="companySearchInput" type="text" placeholder="Search by Company"
-                               class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out"/>
+                               class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out"/>
                         <div id="companySuggestions"
                              class="absolute z-10 w-full sm:w-64 bg-gray-800 text-white rounded-md shadow-lg overflow-hidden hidden">
                         </div>
@@ -189,7 +189,7 @@
 
                     <div class="relative w-full sm:w-auto">
                         <input id="collectionSearchInput" type="text" placeholder="Search by Collection"
-                               class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out"/>
+                               class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out"/>
                         <div id="collectionSuggestions"
                              class="absolute z-10 w-full sm:w-64 bg-gray-800 text-white rounded-md shadow-lg overflow-hidden hidden">
                         </div>
@@ -197,7 +197,7 @@
 
                     <div class="relative w-full sm:w-auto">
                         <input id="franchiseSearchInput" type="text" placeholder="Search by Franchise"
-                               class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 ease-in-out"/>
+                               class="p-2 sm:p-3 glassmorphism rounded-full text-white text-xs sm:text-sm w-full sm:w-64 focus:ring-1 sm:focus:ring-2 focus:ring-red-500 focus:outline-none transition duration-300 ease-in-out"/>
                         <div id="franchiseSuggestions"
                              class="absolute z-10 w-full sm:w-64 bg-gray-800 text-white rounded-md shadow-lg overflow-hidden hidden">
                         </div>
@@ -222,7 +222,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
                     <h2 class="text-lg sm:text-2xl font-bold text-white">Trending Media</h2>
                     <button id="togglePopularMedia"
-                            class="glassmorphism text-white font-bold py-2 px-4 sm:px-6 rounded-full hover:bg-purple-700 transition duration-300 ease-in-out text-sm sm:text-lg">
+                            class="glassmorphism text-white font-bold py-2 px-4 sm:px-6 rounded-full hover:bg-red-700 transition duration-300 ease-in-out text-sm sm:text-lg">
                         Hide Trending Media
                     </button>
                 </div>
@@ -236,7 +236,7 @@
                                 <p class="text-xs sm:text-sm">Genre, Year</p>
                             </div>
                         </div>
-                        <div class="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-full text-xs sm:text-sm font-semibold">
+                        <div class="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded-full text-xs sm:text-sm font-semibold">
                             NEW
                         </div>
                     </div>
@@ -249,7 +249,7 @@
             <div class="flex flex-col items-center mt-8 space-y-6">
                 <div class="flex space-x-4">
                     <button id="prevPage"
-                            class="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium py-2 px-4 sm:px-6 rounded-full shadow-lg hover:from-purple-700 hover:to-pink-700 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="bg-gradient-to-r from-red-700 to-red-500 text-white font-medium py-2 px-4 sm:px-6 rounded-full shadow-lg hover:from-red-700 hover:to-red-500 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
                             aria-label="Previous Page">
                         <span class="flex items-center">
                             <i class="fas fa-chevron-left mr-2"></i>
@@ -257,7 +257,7 @@
                         </span>
                     </button>
                     <button id="nextPage"
-                            class="bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium py-2 px-4 sm:px-6 rounded-full shadow-lg hover:from-purple-700 hover:to-pink-700 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="bg-gradient-to-r from-red-600 to-red-600 text-white font-medium py-2 px-4 sm:px-6 rounded-full shadow-lg hover:from-red-700 hover:to-red-500 transition duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-red-500 focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed"
                             aria-label="Next Page">
                         <span class="flex items-center">
                             Next
@@ -284,7 +284,7 @@
         <p class="mb-4 text-gray-300">We're committed to offering free movies for everyone. Share SleezyTV with your friends and
             family so they can enjoy endless entertainment too!</p>
         <button id="closeModal"
-                class="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 px-4 sm:px-6 rounded-full hover:from-purple-700 hover:to-pink-700 transition duration-300 ease-in-out">Got
+                class="bg-gradient-to-r from-red-600 to-red-500 text-white py-2 px-4 sm:px-6 rounded-full hover:from-red-700 hover:to-red-900 transition duration-300 ease-in-out">Got
             It!</button>
     </div>
 </div>
